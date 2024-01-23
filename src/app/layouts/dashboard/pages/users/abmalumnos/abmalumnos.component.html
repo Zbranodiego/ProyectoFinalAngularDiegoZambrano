@@ -1,0 +1,26 @@
+<form [formGroup]="abmform" (ngSubmit)="enviarForm()">
+    <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <mat-label>Apellido</mat-label>
+        <input matInput formControlName="lastname">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <mat-label>Curso</mat-label>
+        <mat-select formControlName="course" >
+          <mat-option value="front-end">Front-end</mat-option>
+          <mat-option value="back-end">Back-end</mat-option>
+          <mat-option value="fullStack">FullStack</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button>Sumbmit</button>
+</form>
