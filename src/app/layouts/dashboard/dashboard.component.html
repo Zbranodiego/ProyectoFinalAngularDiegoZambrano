@@ -1,14 +1,25 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <h2>Categorias</h2>
+    <mat-nav-list>
+      <a #usersLink="routerLinkActive" routerLinkActive [activated]="usersLink.isActive" mat-list-item
+        routerLink="users">USUARIOS</a>
+
+      <a #courseLink="routerLinkActive" routerLinkActive [activated]="courseLink.isActive" mat-list-item
+        routerLink="cursos">CURSOS</a>
+    </mat-nav-list>
   </mat-drawer>
-  <mat-toolbar>
-      <div class="example-sidenav-content">
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
-            <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-    <h1>Univeridad Esparta</h1>
-  </mat-toolbar>
-  <app-users></app-users>
+
+  <div class="example-sidenav-content">
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Univeridad Esparta</h1>
+    </mat-toolbar>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
 </mat-drawer-container>
