@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { DashboardModule } from './layouts/dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -19,6 +22,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     DashboardModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
+    HttpClientModule,SharedModule,MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

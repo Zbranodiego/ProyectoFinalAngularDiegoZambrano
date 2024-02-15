@@ -4,12 +4,13 @@ import { CursosComponent } from './cursos.component';
 
 
 
+
 @NgModule({
   declarations: [
     CursosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class CursosModule { }

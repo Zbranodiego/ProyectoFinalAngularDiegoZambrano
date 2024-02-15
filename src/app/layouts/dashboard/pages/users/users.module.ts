@@ -9,6 +9,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { SharedModule } from '../../../../shared/shared.module';
+import { UsersRoutingModule } from './users-routing.module';
+import { UsersService } from './users.service';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,8 +21,10 @@ import { SharedModule } from '../../../../shared/shared.module';
   ],
   imports: [
     CommonModule,ReactiveFormsModule,MatFormFieldModule,MatInputModule,
-    MatSelectModule,MatButtonModule,MatTableModule,SharedModule
+    MatSelectModule,MatButtonModule,MatTableModule,SharedModule,
+    UsersRoutingModule,RouterModule
   ],
-  exports:[UsersComponent]
+  exports:[UsersComponent],
+  providers:[UsersService]
 })
 export class UsersModule { }
