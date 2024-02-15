@@ -2,12 +2,12 @@
   <mat-drawer #drawer class="example-sidenav" mode="side">
     <mat-nav-list>
       <a #usersLink="routerLinkActive" routerLinkActive [activated]="usersLink.isActive" mat-list-item
-        routerLink="users">USUARIOS</a>
+        routerLink="users">Usuarios</a>
 
       <a #courseLink="routerLinkActive" routerLinkActive [activated]="courseLink.isActive" mat-list-item
-        routerLink="cursos">CURSOS</a>
+        routerLink="cursos">Curso Front-end</a>
 
-      <a mat-list-item (click)="logOut()">CERRAR SESION</a>
+      <a mat-list-item (click)="logOut()">Cerrar sesion</a>
     </mat-nav-list>
   </mat-drawer>
 

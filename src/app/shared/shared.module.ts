@@ -9,8 +9,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorsPipe } from './validation-errors.pipe';
-
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     SizeDirective,
@@ -24,6 +25,7 @@ import { ValidationErrorsPipe } from './validation-errors.pipe';
     MatButtonModule,MatIconModule,
     MatCardModule, MatFormFieldModule,
     MatInputModule,ReactiveFormsModule,
-    ValidationErrorsPipe]
+    ValidationErrorsPipe,MatDialogModule,
+    MatTableModule,MatDatepickerModule]
 })
 export class SharedModule { }

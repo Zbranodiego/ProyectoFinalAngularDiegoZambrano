@@ -1,1 +1,34 @@
-<p>cursos works!</p>
+<h1>Inscripciones Front-end</h1>
+<div>
+    <button mat-button (click)="onCreate()">Inscribirme</button>
+</div>
+
+<table mat-table [dataSource]="courses">
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let element">{{element.id}}</td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Nombre Completo</th>
+        <td mat-cell *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Fecha de inscripcion</th>
+        <td mat-cell *matCellDef="let element">{{element.date}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Modificar</th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button (click)="onDelete(element.id)"><mat-icon>delete</mat-icon></button>
+
+            <button mat-icon-button (click)="onEdit(element)"><mat-icon>edit</mat-icon></button>
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns:displayedColumns"></tr>
+</table>

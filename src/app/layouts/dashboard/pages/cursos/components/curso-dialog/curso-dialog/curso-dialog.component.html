@@ -1,0 +1,24 @@
+<div mat-dialog-title>
+    <form [formGroup]="courseForm">
+        <div>
+            <mat-form-field>
+                <mat-label>Nombre Completo</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Fecha de inscripcion</mat-label>
+                <input matInput formControlName="date" [matDatepicker]="fechaInscripciomPicker">
+                <mat-hint>Seleccione una fecha</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="fechaInscripciomPicker"></mat-datepicker-toggle>
+                <mat-datepicker #fechaInscripciomPicker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onSave()">Guardar</button>
+    <button mat-dialog-close mat-button>Cancelar</button>
+
+</div>
