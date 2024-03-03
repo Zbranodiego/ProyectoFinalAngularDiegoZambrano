@@ -2,17 +2,23 @@ import { Injectable } from '@angular/core';
 import { Course } from './models/curso-interface';
 import { LoadingService } from '../../../../core/services/loading.service';
 import { delay, finalize, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../../environments/environment';
 
 let courses:Course[]=[]
 
 @Injectable()
 export class CursosService {
 
-  constructor(private loadingService:LoadingService){}
+  constructor(private loadingService:LoadingService,
+    private httpClient:HttpClient){}
 
   getCuourse(){
     this.loadingService.setIsloading(true)
-    return of (courses).pipe(delay(1500),finalize(()=>this.loadingService.setIsloading(false)))
+    return this.httpClient.get<Course[]>(
+      `${environment.apiUrl}/courses`).
+      pipe(finalize(()=>this.loadingService.setIsloading(false)))
+    
   }
 
   createCourse(data:Course){

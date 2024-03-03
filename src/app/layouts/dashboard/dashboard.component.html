@@ -6,6 +6,9 @@
 
       <a #courseLink="routerLinkActive" routerLinkActive [activated]="courseLink.isActive" mat-list-item
         routerLink="cursos">Curso Front-end</a>
+      
+      <a #inscriptionsLink="routerLinkActive" routerLinkActive [activated]="inscriptionsLink.isActive" mat-list-item 
+      routerLink="inscriptions">Inscripciones</a>
 
       <a mat-list-item (click)="logOut()">Cerrar sesion</a>
     </mat-nav-list>
@@ -18,6 +21,10 @@
         <mat-icon>menu</mat-icon>
       </button>
       <h1>Univeridad Esparta</h1>
+      <div *ngIf="authUser$ | async; let user">
+        <span>{{user.id}}  {{user.lastname}}</span>
+        <p>{{user.email}}</p>  
+      </div>
     </mat-toolbar>
     <div>
       <router-outlet></router-outlet>

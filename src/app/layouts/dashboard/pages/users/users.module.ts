@@ -20,8 +20,10 @@ import { RouterModule } from '@angular/router';
     AbmalumnosComponent
   ],
   imports: [
-    CommonModule,ReactiveFormsModule,MatFormFieldModule,MatInputModule,
-    MatSelectModule,MatButtonModule,MatTableModule,SharedModule,
+    CommonModule,ReactiveFormsModule,
+    MatFormFieldModule,MatInputModule,
+    MatSelectModule,MatButtonModule,
+    MatTableModule,SharedModule,
     UsersRoutingModule,RouterModule
   ],
   exports:[UsersComponent],

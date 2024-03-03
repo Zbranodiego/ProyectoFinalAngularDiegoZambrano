@@ -1,50 +1,76 @@
 {
-    "users":[
+    "users": [
         {
-            "id":"1",
-            "name":"Ariel",
-            "lastname":"Sreed",
-            "email":"asreed@gmail.com",
-            "course":"front-end",
-            "password":"455",
-            "token":"eccasc"
+            "id": "1",
+            "name": "Ariel",
+            "lastname": "Sreed",
+            "email": "la@gmail.com",
+            "course": "front-end",
+            "password": "455",
+            "token": "eccasc"
         },
         {
-            "id":"2",
-            "name":"Vana",
-            "lastname":"Ars",
-            "email":"Va@gmail.com",
-            "course":"back-end",
-            "password":"2525",
-            "token":"eeappc"
+            "id": "2",
+            "name": "Vana",
+            "lastname": "Ars",
+            "email": "Va@gmail.com",
+            "course": "back-end",
+            "password": "2525",
+            "token": "eeappc"
         },
         {
-            "id":"3",
-            "name":"Ocanto",
-            "lastname":"Vimo",
-            "email":"ocan@gmail.com",
-            "course":"fullStack",
-            "password":"7858",
-            "token":"queocas"
+            "id": "3",
+            "name": "Ocanto",
+            "lastname": "Vimo",
+            "email": "ocan@gmail.com",
+            "course": "fullStack",
+            "password": "7858",
+            "token": "queocas"
         },
         {
-            "id":"4",
-            "name":"Rocio",
-            "lastname":"Valls",
-            "email":"valls@gmail.com",
-            "course":"front-end",
-            "password":"3658",
-            "token":"quieocaass"
+            "id": "4",
+            "name": "Rocio",
+            "lastname": "Valls",
+            "email": "valls@gmail.com",
+            "course": "front-end",
+            "password": "3658",
+            "token": "quieocaass"
         },
         {
-            "id":"5",
-            "name":"Marte",
-            "lastname":"Nocl",
-            "email":"Nocl@gmail.com",
-            "course":"fullStack",
-            "password":"35748",
-            "token":"qqiecseos"
+            "id": "5",
+            "name": "Marte",
+            "lastname": "Nocl",
+            "email": "Nocl@gmail.com",
+            "course": "fullStack",
+            "password": "35748",
+            "token": "qqiecseos"
         }
-
+    ],
+    
+    "courses":[
+        {
+            "id":1,
+            "name":"front-end"
+        },
+        {
+            "id":2,
+            "name":"back-end"
+        },
+        {
+            "id":3,
+            "name":"fullStack"
+        }
+    ],
+    "inscriptions":[    
+        {
+            "id":1,
+            "userId":"1",
+            "courseId":1
+        },
+        {
+            "id":2,
+            "userId":"2",
+            "courseId":2
+        }
     ]
 }
