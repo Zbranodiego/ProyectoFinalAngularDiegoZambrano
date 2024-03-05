@@ -31,8 +31,8 @@ import { adminGuard } from '../../core/guards/admin.guard';
       },
       {
         path:'inscriptions',
-        loadChildren:()=>import('./pages/inscriptions/inscriptions.module')
-        .then((m)=>m.InscriptionsModule)
+        loadChildren:()=>import('./pages/inscriptions/inscriptions.module').
+        then((m)=>m.InscriptionsModule)
       },
       {
         path: '**',

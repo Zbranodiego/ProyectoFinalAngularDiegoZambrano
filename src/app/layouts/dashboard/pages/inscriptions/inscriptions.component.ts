@@ -5,6 +5,7 @@ import { Store } from '@ngrx/store';
 import { MatDialog } from '@angular/material/dialog';
 import { selectInscription, selectinscriptionsIsloading } from './store/inscriptions.selectors';
 import { InscriptionsActions } from './store/inscriptions.actions';
+import { InscriptionsDialogComponent } from './components/inscriptions-dialog/inscriptions-dialog.component';
 
 @Component({
   selector: 'app-inscriptions',
@@ -30,6 +31,7 @@ export class InscriptionsComponent implements OnDestroy {
         this.store.dispatch(InscriptionsActions.loadInscriptions())
     }
     createInscription():void{
+      this.matDialog.open(InscriptionsDialogComponent)
       
     }
 

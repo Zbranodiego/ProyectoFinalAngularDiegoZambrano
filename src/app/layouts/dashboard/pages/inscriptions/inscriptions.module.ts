@@ -9,7 +9,7 @@ import { StoreModule } from '@ngrx/store';
 import { inscriptionsFeature } from './store/inscriptions.reducer';
 import { SharedModule } from '../../../../shared/shared.module';
 import { InscriptionsDialogComponent } from './components/inscriptions-dialog/inscriptions-dialog.component';
-
+import { CursosService } from '../cursos/cursos.service';
 
 
 @NgModule({
@@ -23,6 +23,7 @@ import { InscriptionsDialogComponent } from './components/inscriptions-dialog/in
     InscriptionsRoutingModule,
     EffectsModule.forFeature([InscriptionsEffects]),
     StoreModule.forFeature(inscriptionsFeature)
-  ]
+  ],
+  providers:[CursosService]
 })
 export class InscriptionsModule { }

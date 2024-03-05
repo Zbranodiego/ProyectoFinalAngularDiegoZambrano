@@ -1,1 +1,6 @@
-<p>inscriptions works!</p>
+<div *ngIf="isloading$ | async; else notLoading">Cargando</div>
+
+
+<ng-template #notLoading>
+    <button (click)="createInscription()" color="primary" mat-flat-button type="button">Incribirse</button>
+</ng-template>
